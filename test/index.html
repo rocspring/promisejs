@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>promise_test</title>
+</head>
+<body>
+	
+<script src= ../lib/promise.js></script>
+<script>
+	function test1() {
+		console.log(1);
+	}
+	function test2() {
+		console.log(2);
+	}
+	function test3() {
+		setTimeout(function(){
+			console.log(3);
+		}, 200);
+		
+	}
+	function test4() {
+		setTimeout(function(){
+			console.log(4);
+		}, 200);
+		
+	}
+	function test5() {
+		console.log(5);
+	}
+	function test6() {
+		setTimeout(function(){
+			console.log(6);
+		}, 200);
+		
+	}
+
+ var promise = new Promise();
+
+ 	promise.then(test1)
+ 		    .then(test2)
+ 			.then(test3)
+ 			.then(test4)
+ 			.then(test5)
+ 			.then(test6);
+
+ 	promise.done();
+</script>
+</body>
+</html>
