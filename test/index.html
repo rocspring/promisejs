@@ -15,24 +15,41 @@
 		console.log(2);
 	}
 	function test3() {
-		setTimeout(function(){
-			console.log(3);
-		}, 200);
-		
+		var p = new Promise();
+
+		p.then( function(){
+			setTimeout( function(){
+				console.log('3');
+			}, 200);
+		});
+
+		return p;
 	}
 	function test4() {
-		setTimeout(function(){
-			console.log(4);
-		}, 200);
+		var p = new Promise();
+
+		p.then( function(){
+			setTimeout( function(){
+				console.log('4');
+			}, 200);
+		});
+
+		return p;
 		
 	}
 	function test5() {
 		console.log(5);
 	}
 	function test6() {
-		setTimeout(function(){
-			console.log(6);
-		}, 200);
+		var p = new Promise();
+
+		p.then( function(){
+			setTimeout( function(){
+				console.log('5');
+			}, 200);
+		});
+
+		return p;
 		
 	}
 
