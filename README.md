@@ -1,4 +1,4 @@
 promisejs
 =========
 
-一个Promise的实现
+一个Promise规范的实现
