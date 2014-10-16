@@ -60,11 +60,11 @@
 	}
 
  start().then( test1, null )
- 		.then( sleep1, null )
+ 		.then( sleep1(), null )
  		.then( test2, null )
- 		.then( sleep2, null )
+ 		.then( sleep2(), null )
  		.then( test3, null )
- 		.then( sleep3, null );
+ 		.then( sleep3(), null );
 
 </script>
 </body>
